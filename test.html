@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="position-fixed p-2" style="width: 100%; opacity: 0.7; background-color: black;">
+      <div class="container justify-content-between d-flex p-2">
+          <div class="d-flex border m-0 fit-content">
+              <img src="images/logo.png" width="25" height="25" alt="">
+              <h3 class="text-white fs-4 ps-2">Forest Coffee</h3>
+          </div>
+          <div class="position-relative fit-content">
+              <button id="toggle-menu" class="border border-1 border-white rounded-3 bg-transparent">
+                <svg id="toggle-arrow" class="transition-all" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-caret-down" viewBox="0 0 16 16"> <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/> </svg>
+              </button>
+              <ul id="menu" class="justify-content-center responsive-nav fit-content transition-all">
+                  <li class="nav-item">
+                      <a class="nav-link text-success fw-bold" href="<?= BASE_URL ?>/">Beranda</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-success fw-bold" href="<?= BASE_URL ?>/portofolio">Portofolio</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-success fw-bold" href="<?= BASE_URL ?>/galeri">Galeri</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-success fw-bold" href="<?= BASE_URL ?>/hubungi">Hubungi</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </nav>
+  <!-- End Navbar -->
+
+  <script type="text/javascript">
+    let toggleButton = document.querySelector('#toggle-menu');
+    let toggleArrow = document.querySelector('#toggle-arrow');
+    let navMenu = document.querySelector('#menu');
+
+    toggleButton.addEventListener('click', function(){
+        if(toggleArrow.classList.contains('up')){
+            toggleArrow.style.transform = '';
+            toggleArrow.classList.remove('up');
+            navMenu.style.display = 'none';
+        } else {
+            toggleArrow.style.transform = 'rotate(180deg)';
+            toggleArrow.classList.add('up');
+            navMenu.style.display = 'inline';
+        }
+    })
+  </script>
+</body>
+</html>
