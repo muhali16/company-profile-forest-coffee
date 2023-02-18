@@ -16,7 +16,7 @@ include 'database/store.php';
 */
 
 define( 'BASE_URL', 'http://' . $_SERVER['SERVER_NAME'] . "/lsp_bsi");
-$req_uri = explode('/',$_SERVER['REQUEST_URI'] );
+$req_uri = explode('/',$_SERVER['REQUEST_URI']);
 
 /**
  * Baris ini digunakan untuk menemukan enpoint dari url
@@ -123,7 +123,7 @@ if(isset($_POST['send'])){
     <!-- Footer -->
     <footer class="bg-green py-4">
         <div class="container text-center">
-            <Dibuat class="fs-6 text-white text-thin">&#169; Muhammad Ali Mustaqim, 2023<br>Dibuat untuk memenuhi syarat Uji Kompetensi LSP Universitas Bina Sarana Informatika.</p>
+            <Dibuat class="fs-6 text-white text-thin">&#169; Muhammad Ali Mustaqim, 2023</p>
         </div>
     </footer>
     <!-- End Footer -->
